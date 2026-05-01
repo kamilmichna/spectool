@@ -1,0 +1,33 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# builds
+build/
+dist/
+public/
+.vite/
+.turbo/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# coverage
+coverage/
+
+# env
+.env
+.env.*
+
+# misc
+.DS_Store
+*.swp
+*.swo
+
+.agents
+.agent
+.github
+openspec

@@ -1,0 +1,41 @@
+{
+  "name": "spectool",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Universal spec viewer for spec-driven development frameworks",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "spectool": "bin/spectool.js"
+  },
+  "scripts": {
+    "dev": "node bin/spectool.js",
+    "dev:full": "concurrently -k \"npm run client:dev\" \"node bin/spectool.js --no-open\"",
+    "build": "npm run client:build",
+    "start": "node bin/spectool.js",
+    "client:dev": "vite --config client/vite.config.mjs",
+    "client:build": "vite build --config client/vite.config.mjs"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "latest",
+    "chokidar": "^3.6.0",
+    "express": "^4.19.2",
+    "fuse.js": "^7.0.0",
+    "kbar": "latest",
+    "mermaid": "^10.9.1",
+    "mri": "^1.2.0",
+    "open": "^9.1.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-markdown": "^9.0.1",
+    "remark-gfm": "^4.0.0",
+    "ws": "^8.18.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "concurrently": "^9.0.1",
+    "prettier": "3.8.3",
+    "supertest": "^6.3.4",
+    "vite": "^5.3.5"
+  }
+}
